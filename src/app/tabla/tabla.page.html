@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>tabla</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Escriba el numero a Multiplicar</ion-label>
+      <ion-input [(ngModel)]="numero" placeholder="Enter Number"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div *ngIf="numero > 0">
+    <br>
+    Tabla del: {{numero}}
+
+    <ion-list>
+      <ion-item *ngFor="let n of table">
+        {{n}} x {{numero}} = {{n * numero}}
+
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

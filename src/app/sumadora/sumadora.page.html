@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Sumadora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Digite el Primer numero a sumar</ion-label>
+      <ion-input [(ngModel)]="numero1" placeholder="Enter Number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Digite el Segundo numero a sumar</ion-label>
+      <ion-input [(ngModel)]="numero2" placeholder="Enter Number"></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <ion-button (click) = "Calcular()">Calcular</ion-button>
+    <ion-list>
+      <ion-item>
+        {{suma}}
+
+      </ion-item>
+    </ion-list>
+
+</ion-content>
